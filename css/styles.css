@@ -12,7 +12,6 @@ header {
     height: 41px;
     flex-shrink: 0;
     padding: 1% 0 1% 1%;
-    
 }
 
 .headerText {
@@ -201,6 +200,9 @@ header img {
 footer {
     height: 274px;
     background: #016162;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
 }
 
 footer h1 {
@@ -219,7 +221,17 @@ footer h1 {
     justify-content: center;
     align-items: flex-start;
     gap: 6px;
-    padding: 2% 0 0 3%;
+    padding: 1% 0 0 3%;
+}
+
+.footerSocials {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1.5%;
+}
+
+.footerSocials img {
+    scale: 0.8;
 }
 
 footer ul {
@@ -227,15 +239,202 @@ footer ul {
     list-style-type: none;
     margin: 0%;
     text-align: right;
-    padding: 0%;
-    margin-left: auto;
-    margin-right: 1%;
+    padding: 0 0 0 3%;
+    justify-content: center;
 }
 
 footer li {
     display: inline-flex;
     align-items: center;
-    gap: 21px;
+    gap: 15px;
     height: 41px;
-    padding-left: 2.5%;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*About Page*/
+
+.aboutBody {
+    width: 100%;
+    height: 2504px;
+    margin: 0%;
+    border: 0%;
+    background: #FAA968;
+}
+
+.aboutContent {
+    width: 100%;
+    height: 1005px;
+    background-color: white;
+}
+
+.aboutTitle {
+    width: 100%;
+    height: 155px;
+    flex-shrink: auto;
+    background-color: #F0562C;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.aboutTitle h1 {
+    margin: 0 2rem 0 0;
+    color: #FFF;
+    text-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    font-family: "ARB-218 Big Blunt MAR-50";
+    font-size: 108px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 92.88px */
+    letter-spacing: -1.08px;
+
+}
+
+/*Member Images*/
+
+.memberSection {
+    display: flex;
+}
+
+.memberSection h1 {
+    color: #F0562C;
+    font-family: Cubano;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 55.04px */
+    letter-spacing: -0.64px;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.memberSection h2 {
+    color: #000;
+    font-family: Fieldwork;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; 
+    letter-spacing: -0.36px;
+    margin: 0 0 0 1.5rem;
+}
+
+.memberSection ul {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.memberSection ul li {
+    display: inline-flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.memberNameOne {
+    display: flex;
+    justify-content: center;
+}
+
+.memberImages {
+    display: flex;
+    justify-content: center;
+    background-color: #F0562C;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.memberImages img {
+    width: 98%;
+    transition: transform 0.3s ease;
+}
+
+.memberImages img:hover {
+    transform: scale(1.1);
+}
+
+/*Maps Container*/
+
+.mapsBody {
+    width: 100%;
+    height: 1504px;
+    margin: 0%;
+    border: 0%;
+    background: #FAA968;
+}
+
+.mapsMainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 1191px;
+    flex-shrink: 0;
+    background: #FFF;
+}
+
+.mapsMainContainer h1 {
+    color: #F0562C;
+    font-family: "ARB-218 Big Blunt MAR-50";
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 65.36px */
+    letter-spacing: -0.76px;
+    margin: 30px 0;
+}
+
+.mapsMainContainer h2 {
+    color: #F0562C;
+    font-family: Fieldwork;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%;
+    letter-spacing: -0.44px;
+    margin: 1rem 0 0 0;
+}
+
+.mapsNavBar {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1221px;
+    height: 66px;
+    flex-shrink: 0;
+    background-color: #f7f7f7;
+    border: 2px solid #B0B0B0;
+}
+
+.mapsNavBar h4 {
+    color: #000;
+    text-align: center;
+    font-family: Fieldwork;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 86%; /* 20.64px */
+    letter-spacing: -0.24px;
+}
+
+.mapsTitle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.mapsTitlePlacement {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    white-space: nowrap;
+    grid-area: 1 / 2 / 2 / 4; 
+}
+
