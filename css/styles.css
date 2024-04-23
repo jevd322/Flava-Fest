@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    height: 3813px;
+    height: 3213px;
     margin: 0%;
     border: 0%;
     background: #FAA968;
@@ -96,28 +96,70 @@ header img {
 .LPageElement {
     position: absolute;
     width: 100%;
-    height: 1005px;
+    height: 905px;
     flex-shrink: 0;
     z-index: 1;
 }
 
 .FlavaTruck {
     width: 1343px;
-    height: 1005px;
+    height: 905px;
     grid-area: 1 / 2 / 2 / 3;
 }
 
 /*Instructions Sections*/
 
 .instructionSection {
-    height: 1466px;
+    height: 966px;
 }
 
-.whiteBar {
-    background-color: #FFF;
-    width: 100%;
-    height: 99px;
+.sideBar {
+    background-color: #005F60;;
+    width: 25%;
+    height: 100%;
 }
+
+.sideBar ul {
+    margin: 0;
+    padding: 2rem 0 0 2rem ;
+}
+
+.sideBar li {
+    text-decoration: none;
+    list-style-type: none;
+    color: #D7DF26;
+    font-family: "ARB-218 Big Blunt MAR-50";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 34.4px */
+    letter-spacing: -0.4px;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.notesSection {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 456px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 9px solid #0A6667;
+    background: #0D6F6D;
+    margin: 30px 30px 0 30px;
+}
+
+.notesSection h2 {
+    color: #D7DF26;
+    font-family: "ARB-218 Big Blunt MAR-50";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 34.4px */
+    letter-spacing: -0.4px;
+}
+
+
 
 
 /*HomePage About Us section */
@@ -147,7 +189,7 @@ header img {
 }
 
 .opaqueOverlayHomePage h1 {
-    grid-area: 2 / 2 / 3 / 4;
+    grid-area: 2 / 3 / 3 / 4;
     display: flex;
     align-items: center;
     color: #FFF;
@@ -158,10 +200,11 @@ header img {
     line-height: 86%; /* 92.88px */
     letter-spacing: -1.08px;
     margin: 0;
+    white-space: nowrap;
 }
 
 .opaqueOverlayHomePage h2 {
-    grid-area: 3 / 2 / 4 / 5;
+    grid-area: 3 / 3 / 4 / 5;
     width: 565px;
     height: 178px;
     flex-shrink: 0;
@@ -177,7 +220,7 @@ header img {
 }
 
 .opaqueOverlayHomePage h3 {
-    grid-area: 4 / 3 / 5 / 5;
+    grid-area: 4 / 4 / 5 / 5;
     color: #17254D;
     font-family: Fieldwork;
     font-size: 50px;
@@ -187,12 +230,38 @@ header img {
     letter-spacing: -0.5px;
     text-transform: uppercase;
     margin: 0;
+    white-space: nowrap;
 }
 
-/*Gallery*/
+/*Home Page Gallery Redirect*/
 
 .homePgGallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 473px;
+    width: 100%;
+}
+
+.homePgGallery img {
+    height: 473px;
+    width: 100%;
+    position: absolute;
+}
+
+
+.homePgGallery h1 {
+    color: #FFF;
+    font-family: "ARB-218 Big Blunt MAR-50";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 61.92px */
+    letter-spacing: -0.72px;
+}
+
+.homePgGalleryTitle {
+    z-index: 1;
 }
 
 /*Footer*/
@@ -267,8 +336,19 @@ a {
 
 .aboutContent {
     width: 100%;
-    height: 1005px;
+    height: 905px;
     background-color: white;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.aboutContent img {
+    scale: 0.9;
+    grid-area: 2 / 3 / 3 / 6;
+    margin: 0 0 0 15%;
 }
 
 .aboutTitle {
@@ -291,6 +371,36 @@ a {
     font-weight: 400;
     line-height: 86%; /* 92.88px */
     letter-spacing: -1.08px;
+}
+
+.aboutFlex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.aboutFlex h1 {
+    color: #F75526;
+    font-family: "ARB-218 Big Blunt MAR-50";
+    font-size: 88px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 75.68px */
+    letter-spacing: -0.88px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.aboutFlex p {
+    color: #000;
+    font-family: Fieldwork;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%; /* 30.96px */
+    letter-spacing: -0.36px;
 
 }
 
@@ -438,3 +548,100 @@ a {
     grid-area: 1 / 2 / 2 / 4; 
 }
 
+/*GALLERY*/
+
+.galleries {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: stretch;
+    width: 90%;
+    height: 150vh;
+    margin: 10px auto;
+    resize: both;
+}
+
+.gallery {
+    position: relative;
+    display: inline-block;
+    flex: 1 1 150px;
+    width: 150px;
+    height: 250px;
+    margin: 2px;
+    text-decoration: none;
+    background-color: rgba(0,0,0, 0.50);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0, 0.0);
+    transition: box-shadow 300ms, transform 400ms, z-index 400ms, background-position 400ms;
+    z-index: 1;
+}
+
+.gallery div span {
+    display: block;
+}
+
+.gallery div span:first-child {
+    font-weight: bold;
+}
+
+.gallery div span:last-child {
+    font-size: 1em;
+}
+
+.gallery:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0, 0.7);
+    transform: scale(1.2, 1.2);
+    z-index: 100;
+}
+
+.galleryImg img, .galleryText div {
+    min-width: 0px;
+    max-width: 500px;
+}
+
+.galleryImg {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.galleryImg img {
+    display: block;
+    height: 100;
+    opacity: 0;
+}
+
+.galleryImg div {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 97.5%;
+    white-space: nowrap;
+    background-color: rgba(0,0,0, 0.30);
+    opacity: 0;
+    transition: opacity 300ms;
+    color: #FFF;
+    font-family: Fieldwork;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 39.6px */
+    letter-spacing: -0.36px;
+    padding: 10px 0 10px 10px;
+}
+
+.galleryImg div span {
+    font-size: 0.8em;
+}
+
+.galleryImg:hover div {
+    opacity: 1;
+}
+
+.galleryText div {
+    display: block;
+    width: auto;
+    height: 100%;
+}
