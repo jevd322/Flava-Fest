@@ -36,3 +36,16 @@ function loadGallery() {
 }
 
 window.onload = loadGallery;
+
+/*-------------INSTRUCTIONS------------------*/
+
+const firstButton = document.getElementById('appearFirst');
+const firstHidden = document.getElementById('firstAppear');
+
+function loadFirst() {
+    firstHidden.style.display = 'block';
+}
+
+firstButton.addEventListener('click', loadFirst);
+
+
