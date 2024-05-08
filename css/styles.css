@@ -167,8 +167,9 @@ header img {
 .mainBar {
     background: #9AE2FF;
     width: 75%;
-    height: 1055px;
+    height: 966px;
     flex-shrink: 0;
+    position: relative;
 }
 
 .mainInstruction {
@@ -179,15 +180,28 @@ header img {
     justify-content: center;
     align-items: center;
     gap: 41px;
-    flex-shrink: 0;
-    
+    z-index: 1;
+}
+
+.instrctnButton {
+    display: flex;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    height: 725px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 91px;
 }
 
 .instrctnObjectiveLeft , .instrctnObjectiveRight {
     height: 84px;
     flex-shrink: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .instrctnObjectiveLeft {
@@ -201,7 +215,7 @@ header img {
     text-align: right;
 }
 
-.mainInstruction h1 {
+.mainBar h1 {
     color: #005F60;
     font-family: "ARB-218 Big Blunt MAR-50";
     font-size: 48px;
@@ -212,7 +226,7 @@ header img {
     margin: 0;
 }
 
-.mainInstruction h2 {
+.mainBar h2 {
     color: #005F60;
     font-family: Fieldwork;
     font-size: 36px;
@@ -222,19 +236,173 @@ header img {
     margin: 0.5rem 0 0 0;
 }
 
-.mainInstruction button {
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+.instrctnButton label {
+    z-index: 10;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 100px;
+    background-color: #DEE55B;
+    border: 1px solid #55BFE9;
+    box-shadow: 0px 0px 0px 0px #55BFE9 inset;
+    transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
 }
 
-#firstAppear {
+.instrctnButton label:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    content: "";
+}
+
+.instrctnButton input[type="checkbox"] {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+.instrctnButton input[type="checkbox"]:checked + .checkboxStyle {
+    background-color: #16BAC5;
+}
+
+.instrctnButton input[type="checkbox"]:checked + .checkboxStyle:after {
+    opacity: 1;
+}
+
+#secondButton, #thirdButton,
+#fourthButton, #fifthButton {
+    visibility: hidden;
+}
+
+#firstAppear, #secondAppear, 
+#thirdAppear, #fourthAppear, #fifthAppear {
     display: none;
 }
+
+.instrctnDetails {
+    width: 100%;
+    height: 241px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*--------->PASSPORT<---------*/
+
+.passportBook {
+    height: 966px;
+    transition: opacity 0.4s 0.2s;
+    perspective: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passportBook input {
+    display: none;
+}
+
+.passportBook img {
+    height: 520px;
+    width: auto;
+    backface-visibility: hidden;
+}
+
+.ppCover {
+    visibility: hidden;
+}
+
+.ppFlip {
+    height: 520px;
+    width: auto;
+    position: relative;
+    perspective: 1500px;
+}
+
+.ppPage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition: .5s;
+}
+
+.ppFrontpage {
+    position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 13px;
+	box-shadow: inset 20px 0 50px rgba(0,0,0,0.5) 0 2px 5px rgba(0,0,0,.5);
+}
+
+.ppBackpage {
+    position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	background: #000;
+}
+
+.ppNext-btn {
+    position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: #000;
+}
+
+.ppBack-btn {
+    position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: #fff;
+}
+
+#page1 {
+    z-index: 3;
+}
+
+#page2 {
+    z-index: 2;
+}
+
+#page3 {
+    z-index: 1;
+}
+
+#ppcboxOne:checked ~ .ppFlip #page1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#ppcboxTwo:checked ~ .ppFlip #page2 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#ppcboxOne:checked ~ .ppFlip #page3 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+
+
+
 
 
 

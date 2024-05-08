@@ -39,13 +39,64 @@ window.onload = loadGallery;
 
 /*-------------INSTRUCTIONS------------------*/
 
-const firstButton = document.getElementById('appearFirst');
+const firstButton = document.getElementById('firstButton');
+const secondButton = document.getElementById('secondButton');
+const thirdButton = document.getElementById('thirdButton');
+const fourthButton = document.getElementById('fourthButton');
+const fifthButton = document.getElementById('fifthButton');
+
 const firstHidden = document.getElementById('firstAppear');
+const secondHidden = document.getElementById('secondAppear');
+const thirdHidden = document.getElementById('thirdAppear');
+const fourthHidden = document.getElementById('fourthAppear');
+const fifthHidden = document.getElementById('fifthAppear');
 
-function loadFirst() {
+
+
+firstButton.addEventListener('click', function() {
     firstHidden.style.display = 'block';
-}
+    secondButton.style.visibility = 'visible';
+    if(this.checked) {
+        this.disabled = true;
+    }
+});
+secondButton.addEventListener('click', function() {
+    secondHidden.style.display = 'block';
+    thirdButton.style.visibility = 'visible';
+    if(this.checked) {
+        this.disabled = true;
+    }
+});
+thirdButton.addEventListener('click', function() {
+    thirdHidden.style.display = 'block';
+    fourthButton.style.visibility = 'visible';
+    if(this.checked) {
+        this.disabled = true;
+    }
+});
+fourthButton.addEventListener('click', function() {
+    fourthHidden.style.display = 'block';
+    fifthButton.style.visibility = 'visible';
+    if(this.checked) {
+        this.disabled = true;
+    }
+});
+fifthButton.addEventListener('click', function() {
+    fifthHidden.style.display = 'block';
+    if(this.checked) {
+        this.disabled = true;
+    }
+});
 
-firstButton.addEventListener('click', loadFirst);
+const testCheck = document.getElementById('testCheck');
+
+testCheck.addEventListener('change', function() {
+    if(this.checked) {
+        this.disabled = true;
+    }
+    alert("check");
+});
+
+
 
 
