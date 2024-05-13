@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/hok1qqq.css">
     <title>Flava Fest</title>
 </head>
+
 <body>
     <header>
-        <a href="index.html"><img src="assets/f55a7e962947f8b83895ba128e1535ff.png" alt="FlavaFest-Logo"></a>
+        <a href="index.html"><img src="assets/FlavaFestLogo.png" alt="FlavaFest-Logo"></a>
         <div class="headerText">
             <h1><a href="about.html">ABOUT</a></h1>
             <h1><a href="maps.html">MAPS</a></h1>
@@ -18,10 +20,14 @@
         </div>
         <ul>
             <li>
-                <img src="assets/FB-Logo.png" alt="Facebook Logo">
-                <img src="assets/IG-Logo.png" alt="Instagram Logo">
-                <img src="assets/Linkedin-Logo.png" alt="LinkedIn Logo">
-                <img src="assets/Twitter-Logo.png" alt="Twitter Logo">
+                <a href="https://www.instagram.com/flavafestireland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <p>@flavafestireland</p>
+                </a>
+                <a href="https://www.instagram.com/flavafestireland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <img src="assets/IG-Logo.png" alt="Instagram Logo">
+                </a>
             </li>
         </ul>
     </header>
@@ -35,7 +41,7 @@
         <img src="assets/589d53565cc264f948071ae23e9c08d6.png" alt="FlavaTruck" class="FlavaTruck">
     </section>
 
-    <section class="instructionSection">
+    <section class="instructionSection" id="instructionSection">
         <div class="sideBar">
             <ul>
                 <li><a href="index.html">INSTRUCTIONS</a></li>
@@ -55,6 +61,13 @@
                 <input type="checkbox" id="ppcboxOne">
                 <input type="checkbox" id="ppcboxTwo">
                 <input type="checkbox" id="ppcboxThree">
+                <input type="checkbox" id="ppcboxFour">
+                <input type="checkbox" id="ppcboxFive">
+                <input type="checkbox" id="ppcboxSix">
+                <input type="checkbox" id="ppcboxSeven">
+                <input type="checkbox" id="ppcboxEight">
+                <input type="checkbox" id="ppcboxNine">
+                <input type="checkbox" id="ppcboxTen">
                 <div class="ppCover">
                     <img src="passport/Cover NP.png">
                 </div>
@@ -66,7 +79,7 @@
                         </div>
                         <div class="ppFrontpage">
                             <img src="passport/Cover NP.png">
-                            <label for="ppcboxOne" class="ppNext-btn">Next</label>
+                            <label for="ppcboxOne" class="ppNext-btn" id="startButton">START</label>
                         </div>
                     </div>
                     <div class="ppPage" id="page2">
@@ -75,8 +88,88 @@
                             <label for="ppcboxTwo" class="ppBack-btn">Back</label>
                         </div>
                         <div class="ppFrontpage">
-                            <img src="passport/MAP PAGE.png">
+                            <img src="passport/personalised page.png">
                             <label for="ppcboxTwo" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page3">
+                        <div class="ppBackpage">
+                            <img src="passport/fruit 1.png">
+                            <label for="ppcboxThree" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/MAP PAGE.png">
+                            <label for="ppcboxThree" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page4">
+                        <div class="ppBackpage">
+                            <img src="passport/veg 1.png">
+                            <label for="ppcboxFour" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/fruit 2.png">
+                            <label for="ppcboxFour" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page5">
+                        <div class="ppBackpage">
+                            <img src="passport/grains 1.png">
+                            <label for="ppcboxFive" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/veg 2.png">
+                            <label for="ppcboxFive" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page6">
+                        <div class="ppBackpage">
+                            <img src="passport/protein 1.png">
+                            <label for="ppcboxSix" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/grains 2.png">
+                            <label for="ppcboxSix" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page7">
+                        <div class="ppBackpage">
+                            <img src="passport/dairy 1.png">
+                            <label for="ppcboxSeven" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/protein 2.png">
+                            <label for="ppcboxSeven" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page8">
+                        <div class="ppBackpage">
+                            <img src="passport/fats 1.png">
+                            <label for="ppcboxEight" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/dairy 2.png">
+                            <label for="ppcboxEight" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page9">
+                        <div class="ppBackpage">
+                            <img src="passport/thanks.png">
+                            <label for="ppcboxNine" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/fats 2.png">
+                            <label for="ppcboxNine" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page10">
+                        <div class="ppBackpage">
+                            <img src="passport/back page.png">
+                            <label for="ppcboxTen" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/end.png">
+                            <label for="ppcboxTen" class="ppNext-btn">Next</label>
                         </div>
                     </div>
                 </div>
@@ -87,7 +180,8 @@
     <section class="homePgAboutUs">
         <div class="opaqueOverlayHomePage">
             <h1>THE GOAL</h1>
-            <h2>Lorem ipsum dolor sit amet consectetur. Dolor mauris volutpat interdum magna ut. Ut sem facilisi id lorem aliquet egestas. Velit cras.</h2>
+            <h2>Lorem ipsum dolor sit amet consectetur. Dolor mauris volutpat interdum magna ut. Ut sem facilisi id
+                lorem aliquet egestas. Velit cras.</h2>
             <h3>Learn more about us...</h3>
         </div>
         <img src="assets/AboutUs-Image.png" alt="Direct to About Us">
@@ -97,7 +191,7 @@
         <div class="homePgGalleryTitle">
             <a href="gallery.html">
                 <h1>GALLERY</h1>
-            </a>    
+            </a>
         </div>
         <img src="assets/Gallery-Image-HomePage.png" alt="Direct to Gallery">
 
@@ -124,4 +218,5 @@
     </footer>
     <script src="/js/script.js"></script>
 </body>
+
 </html>

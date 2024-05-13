@@ -9,19 +9,23 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="assets/f55a7e962947f8b83895ba128e1535ff.png" alt="FlavaFest-Logo"></a>
+        <a href="index.html"><img src="assets/FlavaFestLogo.png" alt="FlavaFest-Logo"></a>
         <div class="headerText">
             <h1><a href="about.html">ABOUT</a></h1>
             <h1><a href="maps.html">MAPS</a></h1>
-            <h1>CONTACT</h1>
+            <h1><a href="#instructionSection">INSTRUCTIONS</a></h1>
             <h1><a href="gallery.html">GALLERY</a></h1>
         </div>
         <ul>
             <li>
-                <img src="assets/FB-Logo.png" alt="Facebook Logo">
-                <img src="assets/IG-Logo.png" alt="Instagram Logo">
-                <img src="assets/Linkedin-Logo.png" alt="LinkedIn Logo">
-                <img src="assets/Twitter-Logo.png" alt="Twitter Logo">
+                <a href="https://www.instagram.com/flavafestireland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <p>@flavafestireland</p>
+                </a>
+                <a href="https://www.instagram.com/flavafestireland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <img src="assets/IG-Logo.png" alt="Instagram Logo">
+                </a>
             </li>
         </ul>
     </header>
@@ -35,11 +39,13 @@
         <img src="assets/589d53565cc264f948071ae23e9c08d6.png" alt="FlavaTruck" class="FlavaTruck">
     </section>
 
-    <section class="instructionSection">
+    <section class="instructionSection" id="instructionSection">
         <div class="sideBar">
+            <input type="button" id="sideBarbtn-1">
+            <input type="button" id="sideBarbtn-2">
             <ul>
-                <li>INSTRUCTIONS</li>
-                <li><a href="passport.html">PASSPORT</a></li>
+                <label for="sideBarbtn-1"><li>INSTRUCTIONS</li></label> 
+                <label for="sideBarbtn-2"><li>PASSPORT</li></label> 
                 <li>GAME DOCUMENT</li>
                 <li>OUR WORK</li>
                 <li>CHARACTERS</li>
@@ -50,55 +56,175 @@
             </div>
         </div>
         <div class="mainBar">
-            <div class="instrctnButton">
-                <input type="checkbox" id="cboxOne">
-                <label for="cboxOne" class="checkboxStyle" id="firstButton"></label>    
-                <input type="checkbox" id="cboxTwo">
-                <label for="cboxTwo" class="checkboxStyle" id="secondButton"></label>
-                <input type="checkbox" id="cboxThree">
-                <label for="cboxThree" class="checkboxStyle" id="thirdButton"></label>
-                <input type="checkbox" id="cboxFour">
-                <label for="cboxFour" class="checkboxStyle" id="fourthButton"></label>
-                <input type="checkbox" id="cboxFifth">
-                <label for="cboxFifth" class="checkboxStyle" id="fifthButton"></label>
-            </div>
-            <div class="mainInstruction">
-                <div class="instrctnObjectiveLeft">
-                    <div>
-                        <h1>GAME OBJECTIVE</h1>
-                        <h2>COLLECT ALL SIX STAMPS</h2>
+            <div id="instrctnDefault">
+                <div class="instrctnButton">
+                    <input type="checkbox" id="cboxOne">
+                    <label for="cboxOne" class="checkboxStyle" id="firstButton"></label>    
+                    <input type="checkbox" id="cboxTwo">
+                    <label for="cboxTwo" class="checkboxStyle" id="secondButton"></label>
+                    <input type="checkbox" id="cboxThree">
+                    <label for="cboxThree" class="checkboxStyle" id="thirdButton"></label>
+                    <input type="checkbox" id="cboxFour">
+                    <label for="cboxFour" class="checkboxStyle" id="fourthButton"></label>
+                    <input type="checkbox" id="cboxFifth">
+                    <label for="cboxFifth" class="checkboxStyle" id="fifthButton"></label>
+                </div>
+                <div class="mainInstruction">
+                    <div class="instrctnObjectiveLeft">
+                        <div>
+                            <h1>GAME OBJECTIVE</h1>
+                            <h2>COLLECT ALL SIX STAMPS</h2>
+                        </div>
+                    </div>
+                    <div class="instrctnObjectiveRight">
+                        <div class="firstAppear" id="firstAppear">
+                            <h1>VISIT</h1>
+                            <h2>ALL DESIGNATED LOCATIONS</h2>    
+                        </div>                
+                    </div>
+                    <div class="instrctnObjectiveLeft">
+                        <div class="secondAppear" id="secondAppear">
+                            <h1>SCAN</h1>
+                            <h2>THE QR CODES</h2>
+                        </div>                
+                    </div>
+                    <div class="instrctnObjectiveRight">
+                        <div class="thirdAppear" id="thirdAppear">
+                            <h1>QUIZ</h1>
+                            <h2>OBTAIN PERFECT SCORE</h2>
+                        </div>                
+                    </div>
+                    <div class="instrctnObjectiveLeft">
+                        <div class="fourthAppear" id="fourthAppear">
+                            <h1>PRIZE</h1>
+                            <h2>RECEIVE YOUR PRIZE ONCE
+                            <br>
+                            YOU COLLECT ALL STAMPS</h2>
+                        </div>                
                     </div>
                 </div>
-                <div class="instrctnObjectiveRight">
-                    <div class="firstAppear" id="firstAppear">
-                        <h1>VISIT</h1>
-                        <h2>ALL DESIGNATED LOCATIONS</h2>    
-                    </div>                
-                </div>
-                <div class="instrctnObjectiveLeft">
-                    <div class="secondAppear" id="secondAppear">
-                        <h1>SCAN</h1>
-                        <h2>THE QR CODES</h2>
-                    </div>                
-                </div>
-                <div class="instrctnObjectiveRight">
-                    <div class="thirdAppear" id="thirdAppear">
-                        <h1>QUIZ</h1>
-                        <h2>OBTAIN PERFECT SCORE</h2>
-                    </div>                
-                </div>
-                <div class="instrctnObjectiveLeft">
-                    <div class="fourthAppear" id="fourthAppear">
-                        <h1>PRIZE</h1>
-                        <h2>RECEIVE YOUR PRIZE ONCE
-                        <br>
-                        YOU COLLECT ALL STAMPS</h2>
-                    </div>                
-                </div>
+                <div id="fifthAppear">
+                    <div class="instrctnDetails">
+                        <h1><u>MORE DETAILS</u></h1>
+                    </div>
+                </div>    
             </div>
-            <div id="fifthAppear">
-                <div class="instrctnDetails">
-                    <h1><u>MORE DETAILS</u></h1>
+
+            <div class="passportBook" id="passportBook">
+                <input type="checkbox" id="ppcboxOne">
+                <input type="checkbox" id="ppcboxTwo">
+                <input type="checkbox" id="ppcboxThree">
+                <input type="checkbox" id="ppcboxFour">
+                <input type="checkbox" id="ppcboxFive">
+                <input type="checkbox" id="ppcboxSix">
+                <input type="checkbox" id="ppcboxSeven">
+                <input type="checkbox" id="ppcboxEight">
+                <input type="checkbox" id="ppcboxNine">
+                <input type="checkbox" id="ppcboxTen">
+                <div class="ppCover">
+                    <img src="passport/Cover NP.png">
+                </div>
+                <div class="ppFlip">
+                    <div class="ppPage" id="page1">
+                        <div class="ppBackpage">
+                            <img src="passport/game description.png">
+                            <label for="ppcboxOne" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/Cover NP.png">
+                            <label for="ppcboxOne" class="ppNext-btn" id="startButton">START</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page2">
+                        <div class="ppBackpage">
+                            <img src="passport/game instructions.png">
+                            <label for="ppcboxTwo" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/personalised page.png">
+                            <label for="ppcboxTwo" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page3">
+                        <div class="ppBackpage">
+                            <img src="passport/fruit 1.png">
+                            <label for="ppcboxThree" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/MAP PAGE.png">
+                            <label for="ppcboxThree" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page4">
+                        <div class="ppBackpage">
+                            <img src="passport/veg 1.png">
+                            <label for="ppcboxFour" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/fruit 2.png">
+                            <label for="ppcboxFour" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page5">
+                        <div class="ppBackpage">
+                            <img src="passport/grains 1.png">
+                            <label for="ppcboxFive" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/veg 2.png">
+                            <label for="ppcboxFive" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page6">
+                        <div class="ppBackpage">
+                            <img src="passport/protein 1.png">
+                            <label for="ppcboxSix" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/grains 2.png">
+                            <label for="ppcboxSix" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page7">
+                        <div class="ppBackpage">
+                            <img src="passport/dairy 1.png">
+                            <label for="ppcboxSeven" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/protein 2.png">
+                            <label for="ppcboxSeven" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page8">
+                        <div class="ppBackpage">
+                            <img src="passport/fats 1.png">
+                            <label for="ppcboxEight" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/dairy 2.png">
+                            <label for="ppcboxEight" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page9">
+                        <div class="ppBackpage">
+                            <img src="passport/thanks.png">
+                            <label for="ppcboxNine" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/fats 2.png">
+                            <label for="ppcboxNine" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
+                    <div class="ppPage" id="page10">
+                        <div class="ppBackpage">
+                            <img src="passport/back page.png">
+                            <label for="ppcboxTen" class="ppBack-btn">Back</label>
+                        </div>
+                        <div class="ppFrontpage">
+                            <img src="passport/end.png">
+                            <label for="ppcboxTen" class="ppNext-btn">Next</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,7 +235,7 @@
         <div class="opaqueOverlayHomePage">
             <h1>THE GOAL</h1>
             <h2>Lorem ipsum dolor sit amet consectetur. Dolor mauris volutpat interdum magna ut. Ut sem facilisi id lorem aliquet egestas. Velit cras.</h2>
-            <h3>Learn more about us...</h3>
+            <h3><a href="about.html">Learn more about us...</a></h3>
         </div>
         <img src="assets/AboutUs-Image.png" alt="Direct to About Us">
     </section>

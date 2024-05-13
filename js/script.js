@@ -54,49 +54,64 @@ const fifthHidden = document.getElementById('fifthAppear');
 
 
 firstButton.addEventListener('click', function() {
-    firstHidden.style.display = 'block';
+    firstHidden.style.visibility = 'visible';
+    firstHidden.style.opacity = '1';
     secondButton.style.visibility = 'visible';
+    secondButton.style.opacity = '1';
     if(this.checked) {
         this.disabled = true;
     }
 });
 secondButton.addEventListener('click', function() {
-    secondHidden.style.display = 'block';
+    secondHidden.style.visibility = 'visible';
+    secondHidden.style.opacity = '1';
     thirdButton.style.visibility = 'visible';
+    thirdButton.style.opacity = '1';
+
     if(this.checked) {
         this.disabled = true;
     }
 });
 thirdButton.addEventListener('click', function() {
-    thirdHidden.style.display = 'block';
+    thirdHidden.style.visibility = 'visible';
+    thirdHidden.style.opacity = '1';
     fourthButton.style.visibility = 'visible';
+    fourthButton.style.opacity = '1';
     if(this.checked) {
         this.disabled = true;
     }
 });
 fourthButton.addEventListener('click', function() {
-    fourthHidden.style.display = 'block';
+    fourthHidden.style.visibility = 'visible';
+    fourthHidden.style.opacity = '1';
     fifthButton.style.visibility = 'visible';
+    fifthButton.style.opacity = '1';
+
     if(this.checked) {
         this.disabled = true;
     }
 });
 fifthButton.addEventListener('click', function() {
-    fifthHidden.style.display = 'block';
+    fifthHidden.style.visibility = 'visible';
+    fifthHidden.style.opacity = '1';
     if(this.checked) {
         this.disabled = true;
     }
 });
 
-const testCheck = document.getElementById('testCheck');
 
-testCheck.addEventListener('change', function() {
-    if(this.checked) {
-        this.disabled = true;
-    }
-    alert("check");
-});
+const sideBarOne = document.getElementById('sideBarbtn-1');
+const sideBarTwo = document.getElementById('sideBarbtn-2');
 
+const instrctnSection = document.getElementById('instrctnDefault');
+const instrctnPassport = document.getElementById('passportBook');
 
+sideBarOne.addEventListener('click', function() {
+    instrctnPassport.style.display = 'none';
+    instrctnSection.style.display = 'inline';
+})
 
-
+sideBarTwo.addEventListener('click', function() {
+    instrctnPassport.style.display = 'flex';
+    instrctnSection.style.display = 'none';
+})

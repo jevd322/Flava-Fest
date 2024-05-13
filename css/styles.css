@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     height: 3213px;
@@ -8,10 +12,11 @@ body {
 
 header { 
     display: flex;
+    align-items: center;
     width: 98%;
     height: 41px;
     flex-shrink: 0;
-    padding: 1% 0 1% 1%;
+    padding: 1% 0 0.75% 1%;
 }
 
 .headerText {
@@ -20,7 +25,7 @@ header {
     gap: 39px;
     padding-left: 2.5%;
     margin: none;
-    color: #F75526;
+    color: #17254D;
     font-family: Fieldwork;
     font-size: 14px;
     font-style: normal;
@@ -46,13 +51,24 @@ header li {
     padding-left: 2.5%;
 }
 
+header li p {
+    color: #17254D;
+    font-family: Fieldwork;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 header img { 
-    width: 50px;
+    width: 60px;
+    height: auto;
 }
 
 /* LANDING PAGE */
 
 .bgElement {
+    width: 1903px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -69,7 +85,8 @@ header img {
     align-content: center;
     flex-wrap: wrap;
     padding-left: 30%;
-    width: fit-content
+    width: fit-content;
+    
 }
 
 .bgElement h1 {
@@ -84,12 +101,14 @@ header img {
 }
 
 .bgElement h2 {
-    color: #FFF;
+    color: #DEE55B;
     font-family: Fieldwork;
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
     margin: 0;
 }
 
@@ -102,17 +121,16 @@ header img {
 }
 
 .FlavaTruck {
-    width: 1343px;
+    width: 1243px;
     height: 905px;
     grid-area: 1 / 2 / 2 / 3;
 }
 
-/*Instructions Sections*/
+/*--------->INSTRUCTION SECTION<---------*/
 
 .instructionSection {
     height: 966px;
     display: flex;
-
 }
 
 .sideBar {
@@ -140,6 +158,19 @@ header img {
     line-height: 86%; /* 34.4px */
     letter-spacing: -0.4px;
     padding: 1rem 1rem 1rem 0;
+}
+
+.sideBar label {
+    cursor: pointer;
+}
+
+.sideBar li:hover {
+    color: #fbffa7;
+    transition: 0.4s;
+}
+
+.sideBar input[type="button"] {
+    display: none;
 }
 
 .notesSection {
@@ -172,6 +203,30 @@ header img {
     position: relative;
 }
 
+/*--------->INSTRUCTIONS<---------*/
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+      }
+      100% {
+        -webkit-transform: translateX(100px);
+                transform: translateX(100px);
+      }
+}
+
+@keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+  }
+
 .mainInstruction {
     display: flex;
     width: 100%;
@@ -181,6 +236,7 @@ header img {
     align-items: center;
     gap: 41px;
     z-index: 1;
+    transition: 0.4s;
 }
 
 .instrctnButton {
@@ -265,6 +321,11 @@ header img {
     position: absolute;
 }
 
+.checkboxStyle:hover {
+    background-color: #4ce74c;
+    transition: 0.4s;
+}
+
 .instrctnButton input[type="checkbox"]:checked + .checkboxStyle {
     background-color: #16BAC5;
 }
@@ -276,12 +337,17 @@ header img {
 #secondButton, #thirdButton,
 #fourthButton, #fifthButton {
     visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
 }
 
 #firstAppear, #secondAppear, 
 #thirdAppear, #fourthAppear, #fifthAppear {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
 }
+
 
 .instrctnDetails {
     width: 100%;
@@ -289,6 +355,10 @@ header img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#instrctnDefault {
+    display: block;
 }
 
 
@@ -299,8 +369,23 @@ header img {
     transition: opacity 0.4s 0.2s;
     perspective: 250px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    flex-direction: row;
+}
+
+#passportBook {
+    display: none;
+}
+
+.passportBook label {
+    color: #DEE55B;
+    font-family: Fieldwork;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
 }
 
 .passportBook input {
@@ -308,17 +393,19 @@ header img {
 }
 
 .passportBook img {
-    height: 520px;
+    height: 620px;
     width: auto;
     backface-visibility: hidden;
+    padding: 0px;
 }
 
 .ppCover {
     visibility: hidden;
+    padding: 0 22.5% 0 0;
 }
 
 .ppFlip {
-    height: 520px;
+    height: 620px;
     width: auto;
     position: relative;
     perspective: 1500px;
@@ -342,7 +429,6 @@ header img {
 	top: 0;
 	left: 0;
 	box-sizing: border-box;
-	padding: 0 13px;
 	box-shadow: inset 20px 0 50px rgba(0,0,0,0.5) 0 2px 5px rgba(0,0,0,.5);
 }
 
@@ -357,33 +443,70 @@ header img {
 	background: #000;
 }
 
-.ppNext-btn {
+.ppNext-btn, .ppBack-btn {
     position: absolute;
 	bottom: 13px;
 	right: 13px;
 	cursor: pointer;
-	color: #000;
 }
 
 .ppBack-btn {
     position: absolute;
 	bottom: 13px;
-	right: 13px;
+	left: 13px;
 	cursor: pointer;
-	color: #fff;
 }
 
+#startButton {
+    background-color:#D7DF26;
+    color: black;
+    padding: 7.5px 7.5px 0 7.5px;
+    border-radius: 5px;
+    bottom: 75px;
+    right: 175px;
+}   
+
 #page1 {
-    z-index: 3;
+    z-index: 10;
 }
 
 #page2 {
-    z-index: 2;
+    z-index: 9;
 }
 
 #page3 {
+    z-index: 8;
+}
+
+#page4 {
+    z-index: 7;
+} 
+
+#page5 {
+    z-index: 6;
+} 
+
+#page6 {
+    z-index: 5;
+} 
+
+#page7 {
+    z-index: 4;
+} 
+
+#page8 {
+    z-index: 3;
+} 
+
+#page9 {
+    z-index: 2;
+} 
+
+#page10 {
     z-index: 1;
 }
+
+
 
 #ppcboxOne:checked ~ .ppFlip #page1 {
     transform: rotateY(-180deg);
@@ -392,17 +515,48 @@ header img {
 
 #ppcboxTwo:checked ~ .ppFlip #page2 {
     transform: rotateY(-180deg);
-    z-index: 1;
+    z-index: 2;
 }
 
-#ppcboxOne:checked ~ .ppFlip #page3 {
+#ppcboxThree:checked ~ .ppFlip #page3 {
     transform: rotateY(-180deg);
-    z-index: 1;
+    z-index: 3;
 }
 
+#ppcboxFour:checked ~ .ppFlip #page4 {
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
 
+#ppcboxFive:checked ~ .ppFlip #page5 {
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
 
+#ppcboxSix:checked ~ .ppFlip #page6 {
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
 
+#ppcboxSeven:checked ~ .ppFlip #page7 {
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+
+#ppcboxEight:checked ~ .ppFlip #page8 {
+    transform: rotateY(-180deg);
+    z-index: 8;
+}
+
+#ppcboxNine:checked ~ .ppFlip #page9 {
+    transform: rotateY(-180deg);
+    z-index: 9;
+}
+
+#ppcboxTen:checked ~ .ppFlip #page10 {
+    transform: rotateY(-180deg);
+    z-index: 10;
+}
 
 
 
@@ -592,7 +746,7 @@ a {
 
 .aboutContent img {
     scale: 0.9;
-    grid-area: 2 / 3 / 3 / 6;
+    grid-area: 2 / 4 / 3 / 6;
     margin: 0 0 0 15%;
 }
 
@@ -619,11 +773,14 @@ a {
 }
 
 .aboutFlex {
+    position: relative;
+    width: 130%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2 / 1 / 3 / 3;
+    left: 25%;
 }
 
 .aboutFlex h1 {
@@ -641,11 +798,11 @@ a {
 .aboutFlex p {
     color: #000;
     font-family: Fieldwork;
-    font-size: 36px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
-    line-height: 86%; /* 30.96px */
-    letter-spacing: -0.36px;
+    line-height: 100%; /* 30.96px */
+    letter-spacing: 0.36px;
 
 }
 
