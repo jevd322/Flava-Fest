@@ -10,6 +10,10 @@ body {
     background: #FAA968;
 }
 
+ul {
+    list-style-type: none;
+}
+
 header { 
     display: flex;
     align-items: center;
@@ -160,12 +164,17 @@ header img {
     padding: 1rem 1rem 1rem 0;
 }
 
+#active-1:hover, #active-2:hover {
+    color: #fbffa7;
+    transition: 0.4s;
+}
+
 .sideBar label {
     cursor: pointer;
 }
 
 .sideBar li:hover {
-    color: #fbffa7;
+    color: #fbffa7 !important;
     transition: 0.4s;
 }
 
@@ -559,7 +568,74 @@ header img {
 }
 
 
+/*--------->CHARACTERS<---------*/
 
+.charBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 966px;
+    width: 100%;
+}
+
+#charBody {
+    display: none;
+}
+
+.charFormat {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.charBody img {
+    width: 100%;
+}
+
+.charCard {
+    width: 320px;
+    height: 370px;
+    background: #005F60;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.charCard h1 {
+    color: #D7DF26;
+    font-family: Fieldwork;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%;
+    letter-spacing: -0.44px;
+}
+
+.charCard p {
+    color: #ffffff;
+    font-family: Fieldwork;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+}
+
+.charCard img {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+}
 
 /*HomePage About Us section */
 
@@ -952,98 +1028,76 @@ a {
 
 /*GALLERY*/
 
-.galleries {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
-    align-items: stretch;
-    width: 90%;
-    height: 150vh;
-    margin: 10px auto;
-    resize: both;
+.galleryBody {
+    height: fit-content;
+    background-color: rgb(36, 36, 36);
 }
 
 .gallery {
-    position: relative;
-    display: inline-block;
-    flex: 1 1 150px;
-    width: 150px;
-    height: 250px;
-    margin: 2px;
-    text-decoration: none;
-    background-color: rgba(0,0,0, 0.50);
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0, 0.0);
-    transition: box-shadow 300ms, transform 400ms, z-index 400ms, background-position 400ms;
-    z-index: 1;
+    padding: 0 0 7.5% 0;
+
 }
 
-.gallery div span {
-    display: block;
-}
-
-.gallery div span:first-child {
-    font-weight: bold;
-}
-
-.gallery div span:last-child {
-    font-size: 1em;
-}
-
-.gallery:hover {
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0, 0.7);
-    transform: scale(1.2, 1.2);
-    z-index: 100;
-}
-
-.galleryImg img, .galleryText div {
-    min-width: 0px;
-    max-width: 500px;
-}
-
-.galleryImg {
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-
-.galleryImg img {
-    display: block;
-    height: 100;
-    opacity: 0;
-}
-
-.galleryImg div {
-    display: block;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 97.5%;
-    white-space: nowrap;
-    background-color: rgba(0,0,0, 0.30);
-    opacity: 0;
-    transition: opacity 300ms;
-    color: #FFF;
-    font-family: Fieldwork;
-    font-size: 24px;
+.gallery h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #F75526;
+    font-family: "ARB-218 Big Blunt MAR-50";
+    font-size: 88px;
     font-style: normal;
     font-weight: 400;
-    line-height: 110%; /* 39.6px */
-    letter-spacing: -0.36px;
-    padding: 10px 0 10px 10px;
+    line-height: 86%; /* 75.68px */
+    letter-spacing: -0.88px;
 }
 
-.galleryImg div span {
-    font-size: 0.8em;
+.galleryImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
 }
 
-.galleryImg:hover div {
-    opacity: 1;
+.galleryImages li {
+    flex: auto;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
 }
 
-.galleryText div {
-    display: block;
-    width: auto;
+.galleryImages::after {
+    content: "";
+    flex-grow: 1;
+}
+
+.galleryImages li img {
+    object-fit: cover;
+    width: 100%;
     height: 100%;
+    vertical-align: middle;
 }
+
+.galleryOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #55bfe9c7;
+    top: 0;
+    left: 0;
+    transform: scale(1, 0);
+    transition: all 0.3s 0.1s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryImages li:hover {
+    flex-basis: auto;
+}
+
+.galleryImages li:hover .galleryOverlay {
+    transform: scale(1);
+}
+

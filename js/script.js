@@ -1,41 +1,3 @@
-var galleryPhotos = [
-    {type: "img", src: "'gallery/Flava Fest-09.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-10.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-11.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-15.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-17.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-17.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-17.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-17.png'", href: "#somelink", title: "Lorem Ipsum"},
-    {type: "img", src: "'gallery/Flava Fest-17.png'", href: "#somelink", title: "Lorem Ipsum"},
-]
-
-var galleryCreateImg = '<a href="%href%" class="gallery galleryImg" style="background-image: url(%src%);>'
-        + '<img src="%src%" alt="%title%">'
-        + '<div><span>%title%</span></div>'
-        + '</a>';
-
-var galleryCreateText = '<a href="%href%" class"gallery galleryText">'
-        + '<div><span>%title%</span><span>%text%</span></div>'
-        + '</a>';
-
-
-var cs = "";
-
-for(var i=0; i<galleryPhotos.length; i++) {
-    var gallery = galleryPhotos[i].type =="img" ? galleryCreateImg : galleryCreateText;
-    for(var k in galleryPhotos[i])
-    gallery = gallery.replace(eval("/%"+k+"%/g"), galleryPhotos[i][k]);
-
-    cs += gallery;
-}
-
-function loadGallery() {
-    var galleryID = document.getElementById("gallery");
-    galleryID.innerHTML = cs;
-}
-
-window.onload = loadGallery;
 
 /*-------------INSTRUCTIONS------------------*/
 
@@ -102,16 +64,42 @@ fifthButton.addEventListener('click', function() {
 
 const sideBarOne = document.getElementById('sideBarbtn-1');
 const sideBarTwo = document.getElementById('sideBarbtn-2');
+const sideBarThree = document.getElementById('sideBarbtn-3');
+
+const activeOne = document.getElementById('active-1');
+const activeTwo = document.getElementById('active-2');
+const activeThree = document.getElementById('active-3');
 
 const instrctnSection = document.getElementById('instrctnDefault');
 const instrctnPassport = document.getElementById('passportBook');
+const charactersSection = document.getElementById('charBody');
 
 sideBarOne.addEventListener('click', function() {
     instrctnPassport.style.display = 'none';
+    charactersSection.style.display = 'none';
     instrctnSection.style.display = 'inline';
+
+    activeOne.style.color = '#fbffa7';
+    activeTwo.style.color = '#D7DF26';
+    activeThree.style.color = '#D7DF26';
 })
 
 sideBarTwo.addEventListener('click', function() {
     instrctnPassport.style.display = 'flex';
     instrctnSection.style.display = 'none';
+    charactersSection.style.display = 'none';
+
+    activeTwo.style.color = '#fbffa7';
+    activeOne.style.color = '#D7DF26';
+    activeThree.style.color = '#D7DF26';
+})
+
+sideBarThree.addEventListener('click', function() {
+    instrctnPassport.style.display = 'none';
+    instrctnSection.style.display = 'none';
+    charactersSection.style.display = 'flex';
+
+    activeTwo.style.color = '#D7DF26';
+    activeOne.style.color = '#D7DF26';
+    activeThree.style.color = '#fbffa7';
 })
