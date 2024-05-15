@@ -4,7 +4,7 @@ html {
 
 body {
     width: 100%;
-    height: 3213px;
+    height: fit-content;
     margin: 0%;
     border: 0%;
     background: #FAA968;
@@ -72,7 +72,8 @@ header img {
 /* LANDING PAGE */
 
 .bgElement {
-    width: 1903px;
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -125,9 +126,9 @@ header img {
 }
 
 .FlavaTruck {
-    width: 1243px;
+    width: 100%;
     height: 905px;
-    grid-area: 1 / 2 / 2 / 3;
+    object-fit: cover;
 }
 
 /*--------->INSTRUCTION SECTION<---------*/
@@ -726,7 +727,7 @@ header img {
 
 
 .homePgGallery h1 {
-    color: #FFF;
+    color: #005F60;
     font-family: "ARB-218 Big Blunt MAR-50";
     font-size: 72px;
     font-style: normal;
@@ -736,6 +737,12 @@ header img {
 }
 
 .homePgGalleryTitle {
+    width: 100%;
+    height: 100%;
+    background: #005e602a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
 }
 
@@ -792,6 +799,19 @@ footer li {
     align-items: center;
     gap: 15px;
     height: 41px;
+}
+
+.footerTrademark {
+    width: 100%;
+    color: #000000;
+    font-family: Fieldwork;
+    font-size: 14px;
+    font-style: normal;
+    white-space: nowrap; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 2.5%;
 }
 
 a {
@@ -930,6 +950,7 @@ a {
 
 .memberImages {
     display: flex;
+    flex-basis: auto;
     justify-content: center;
     background-color: #F0562C;
     padding-bottom: 10px;
@@ -938,6 +959,8 @@ a {
 
 .memberImages img {
     width: 98%;
+    height: 572px;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -949,7 +972,7 @@ a {
 
 .mapsBody {
     width: 100%;
-    height: 1504px;
+    height: fit-content;
     margin: 0%;
     border: 0%;
     background: #FAA968;
@@ -960,7 +983,7 @@ a {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 1191px;
+    height: 991px;
     flex-shrink: 0;
     background: #FFF;
 }
@@ -998,7 +1021,7 @@ a {
     border: 2px solid #B0B0B0;
 }
 
-.mapsNavBar h4 {
+.mapsNavBar label {
     color: #000;
     text-align: center;
     font-family: Fieldwork;
@@ -1007,7 +1030,37 @@ a {
     font-weight: 600;
     line-height: 86%; /* 20.64px */
     letter-spacing: -0.24px;
+    margin: 0;
+    cursor: pointer;
 }
+
+.mapsSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.mapsMainContainer input[type="button"] {
+    display: none;
+}
+
+.mapsSelect:hover {
+    background-color: #dbdbdb;
+}
+
+.mapDisplay {
+    padding: 2.5% 0;
+}
+
+#map-2,
+#map-3, #map-4 {
+    display: none;
+}
+
+
 
 .mapsTitle {
     width: 100%;
@@ -1101,3 +1154,1168 @@ a {
     transform: scale(1);
 }
 
+@media only screen and (min-width : 568px)  {
+	
+}
+
+@media only screen and (min-width : 1224px)  {
+	
+}
+
+
+
+
+@media only screen and (min-width : 2500px) {
+	html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        width: 100%;
+        height: fit-content;
+        margin: 0%;
+        border: 0%;
+        background: #FAA968;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    header { 
+        display: flex;
+        align-items: center;
+        width: 98%;
+        height: 61px;
+        flex-shrink: 0;
+        padding: 1% 0 0.75% 1%;
+    }
+    
+    .headerText {
+        display: inline-flex;
+        align-items: center;
+        gap: 39px;
+        padding-left: 2.5%;
+        margin: none;
+        color: #17254D;
+        font-family: Fieldwork;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    
+    header ul {
+        display: inline-flex;
+        list-style-type: none;
+        margin: 0%;
+        text-align: right;
+        padding: 0%;
+        margin-left: auto;
+        margin-right: 1%;
+    }
+    
+    header li {
+        display: inline-flex;
+        align-items: center;
+        gap: 21px;
+        height: 41px;
+        padding-left: 2.5%;
+    }
+    
+    header li p {
+        color: #17254D;
+        font-family: Fieldwork;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    header img { 
+        width: 80px;
+        height: auto;
+    }
+    
+    /* LANDING PAGE */
+    
+    .bgElement {
+        width: 100%;
+        height: 1240px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        position: relative;
+    }
+    
+    .TitleLandingPage {
+        display: flex;
+        grid-area: 1 / 1 / 2 / 2;
+        z-index: 2;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding-left: 30%;
+        width: fit-content;
+        
+    }
+    
+    .bgElement h1 {
+        color: #FFF;
+        font-family: Cubano;
+        font-size: 200px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 172px */
+        letter-spacing: -2px;
+        margin: 0;
+    }
+    
+    .bgElement h2 {
+        color: #DEE55B;
+        font-family: Fieldwork;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        white-space: nowrap;
+        margin: 0;
+    }
+    
+    .LPageElement {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        z-index: 1;
+    }
+    
+    .FlavaTruck {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /*--------->INSTRUCTION SECTION<---------*/
+    
+    .instructionSection {
+        height: 1306px;
+        display: flex;
+    }
+    
+    .sideBar {
+        background-color: #005F60;;
+        width: 25%;
+        height: 100%;
+        border-right: 9px solid #005354;
+        background: #005F60;
+        box-shadow: 1px 9px 0px 6px rgba(0, 60, 62, 0.45);
+    }
+    
+    .sideBar ul {
+        margin: 0;
+        padding: 2rem 0 0 2rem ;
+    }
+    
+    .sideBar li {
+        text-decoration: none;
+        list-style-type: none;
+        color: #D7DF26;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 34.4px */
+        letter-spacing: -0.4px;
+        padding: 1rem 1rem 1rem 0;
+    }
+    
+    #active-1:hover, #active-2:hover {
+        color: #fbffa7;
+        transition: 0.4s;
+    }
+    
+    .sideBar label {
+        cursor: pointer;
+    }
+    
+    .sideBar li:hover {
+        color: #fbffa7 !important;
+        transition: 0.4s;
+    }
+    
+    .sideBar input[type="button"] {
+        display: none;
+    }
+    
+    .notesSection {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: 696px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        border: 9px solid #0A6667;
+        background: #0D6F6D;
+        margin: 60px 30px 0 30px;
+    }
+    
+    .notesSection h2 {
+        color: #D7DF26;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 34.4px */
+        letter-spacing: -0.4px;
+    }
+    
+    .mainBar {
+        background: #9AE2FF;
+        width: 75%;
+        height: 100%;
+        flex-shrink: 0;
+        position: relative;
+    }
+    
+    /*--------->INSTRUCTIONS<---------*/
+    
+    @keyframes slide-right {
+        0% {
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+          }
+          100% {
+            -webkit-transform: translateX(100px);
+                    transform: translateX(100px);
+          }
+    }
+    
+    @keyframes slide-right {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+        }
+        100% {
+          -webkit-transform: translateX(100px);
+                  transform: translateX(100px);
+        }
+      }
+    
+    .mainInstruction {
+        display: flex;
+        width: 100%;
+        height: 925px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 91px;
+        z-index: 1;
+        transition: 0.4s;
+    }
+    
+    .instrctnButton {
+        display: flex;
+        position: absolute;
+        margin-right: auto;
+        margin-left: auto;
+        left: 0;
+        right: 0;
+        height: 925px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 141px;
+    }
+    
+    .instrctnObjectiveLeft , .instrctnObjectiveRight {
+        height: 84px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .instrctnObjectiveLeft {
+        align-self: flex-start;
+        margin: 0 0 0 6rem;
+    }
+    
+    .instrctnObjectiveRight {
+        align-self: flex-end;
+        margin: 0 6rem 0 0;
+        text-align: right;
+    }
+    
+    .mainBar h1 {
+        color: #005F60;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 41.28px */
+        letter-spacing: -0.48px;
+        margin: 0;
+    }
+    
+    .mainBar h2 {
+        color: #005F60;
+        font-family: Fieldwork;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0.5rem 0 0 0;
+    }
+    
+    .instrctnButton label {
+        z-index: 10;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 100px;
+        background-color: #DEE55B;
+        border: 1px solid #55BFE9;
+        box-shadow: 0px 0px 0px 0px #55BFE9 inset;
+        transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+    }
+    
+    .instrctnButton label:after {
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        content: "";
+    }
+    
+    .instrctnButton input[type="checkbox"] {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+    
+    .checkboxStyle:hover {
+        background-color: #4ce74c;
+        transition: 0.4s;
+    }
+    
+    .instrctnButton input[type="checkbox"]:checked + .checkboxStyle {
+        background-color: #16BAC5;
+    }
+    
+    .instrctnButton input[type="checkbox"]:checked + .checkboxStyle:after {
+        opacity: 1;
+    }
+    
+    #secondButton, #thirdButton,
+    #fourthButton, #fifthButton {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s linear;
+    }
+    
+    #firstAppear, #secondAppear, 
+    #thirdAppear, #fourthAppear, #fifthAppear {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s linear;
+    }
+    
+    
+    .instrctnDetails {
+        width: 100%;
+        height: 241px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #instrctnDefault {
+        display: block;
+    }
+    
+    
+    /*--------->PASSPORT<---------*/
+    
+    .passportBook {
+        height: 100%;
+        transition: opacity 0.4s 0.2s;
+        perspective: 250px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    #passportBook {
+        display: none;
+    }
+    
+    .passportBook label {
+        color: #DEE55B;
+        font-family: Fieldwork;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    
+    .passportBook input {
+        display: none;
+    }
+    
+    .passportBook img {
+        height: 920px;
+        width: auto;
+        backface-visibility: hidden;
+        padding: 0px;
+    }
+    
+    .ppCover {
+        visibility: hidden;
+        padding: 0 17.5% 0 0;
+    }
+    
+    .ppFlip {
+        height: 920px;
+        width: auto;
+        position: relative;
+        perspective: 1500px;
+    }
+    
+    .ppPage {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: left;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        transition: .5s;
+    }
+    
+    .ppFrontpage {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        box-shadow: inset 20px 0 50px rgba(0,0,0,0.5) 0 2px 5px rgba(0,0,0,.5);
+    }
+    
+    .ppBackpage {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        background: #000;
+    }
+    
+    .ppNext-btn, .ppBack-btn {
+        position: absolute;
+        bottom: 13px;
+        right: 13px;
+        cursor: pointer;
+    }
+    
+    .ppBack-btn {
+        position: absolute;
+        bottom: 13px;
+        left: 13px;
+        cursor: pointer;
+    }
+    
+    #startButton {
+        background-color:#D7DF26;
+        color: black;
+        padding: 7.5px 7.5px 0 7.5px;
+        border-radius: 5px;
+        bottom: 100px;
+        right: 100px;
+    }   
+    
+    #page1 {
+        z-index: 10;
+    }
+    
+    #page2 {
+        z-index: 9;
+    }
+    
+    #page3 {
+        z-index: 8;
+    }
+    
+    #page4 {
+        z-index: 7;
+    } 
+    
+    #page5 {
+        z-index: 6;
+    } 
+    
+    #page6 {
+        z-index: 5;
+    } 
+    
+    #page7 {
+        z-index: 4;
+    } 
+    
+    #page8 {
+        z-index: 3;
+    } 
+    
+    #page9 {
+        z-index: 2;
+    } 
+    
+    #page10 {
+        z-index: 1;
+    }
+    
+    
+    
+    #ppcboxOne:checked ~ .ppFlip #page1 {
+        transform: rotateY(-180deg);
+        z-index: 1;
+    }
+    
+    #ppcboxTwo:checked ~ .ppFlip #page2 {
+        transform: rotateY(-180deg);
+        z-index: 2;
+    }
+    
+    #ppcboxThree:checked ~ .ppFlip #page3 {
+        transform: rotateY(-180deg);
+        z-index: 3;
+    }
+    
+    #ppcboxFour:checked ~ .ppFlip #page4 {
+        transform: rotateY(-180deg);
+        z-index: 4;
+    }
+    
+    #ppcboxFive:checked ~ .ppFlip #page5 {
+        transform: rotateY(-180deg);
+        z-index: 5;
+    }
+    
+    #ppcboxSix:checked ~ .ppFlip #page6 {
+        transform: rotateY(-180deg);
+        z-index: 6;
+    }
+    
+    #ppcboxSeven:checked ~ .ppFlip #page7 {
+        transform: rotateY(-180deg);
+        z-index: 7;
+    }
+    
+    #ppcboxEight:checked ~ .ppFlip #page8 {
+        transform: rotateY(-180deg);
+        z-index: 8;
+    }
+    
+    #ppcboxNine:checked ~ .ppFlip #page9 {
+        transform: rotateY(-180deg);
+        z-index: 9;
+    }
+    
+    #ppcboxTen:checked ~ .ppFlip #page10 {
+        transform: rotateY(-180deg);
+        z-index: 10;
+    }
+    
+    
+    /*--------->CHARACTERS<---------*/
+    
+    .charBody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 966px;
+        width: 100%;
+    }
+    
+    #charBody {
+        display: none;
+    }
+    
+    .charFormat {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .charBody img {
+        width: 100%;
+    }
+    
+    .charCard {
+        width: 420px;
+        height: 470px;
+        background: #005F60;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    
+    .charCard h1 {
+        color: #D7DF26;
+        font-family: Fieldwork;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%;
+        letter-spacing: -0.44px;
+    }
+    
+    .charCard p {
+        color: #ffffff;
+        font-family: Fieldwork;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin: 0;
+    }
+    
+    .charCard img {
+        width: 150px;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+    /*HomePage About Us section */
+    
+    .homePgAboutUs {
+        display: flex;
+        width: 100%;
+        height: 593px;
+        flex-shrink: 0;
+    }
+    
+    .homePgAboutUs img {
+        position: absolute;
+        width: 100%;
+    }
+    
+    .opaqueOverlayHomePage { 
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 100%;
+        height: 593px;
+        background: rgba(250, 169, 104, 0.35);
+        z-index: 1;
+    }
+    
+    .opaqueOverlayHomePage h1 {
+        grid-area: 2 / 3 / 3 / 4;
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 108px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 92.88px */
+        letter-spacing: -1.08px;
+        margin: 0;
+        white-space: nowrap;
+    }
+    
+    .opaqueOverlayHomePage h2 {
+        grid-area: 3 / 3 / 4 / 5;
+        width: 565px;
+        height: 178px;
+        flex-shrink: 0;
+        color: #FFF;
+        font-family: Fieldwork;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 39.6px */
+        letter-spacing: -0.36px;
+        margin: 2% 0 0 10%;
+    
+    }
+    
+    .opaqueOverlayHomePage h3 {
+        grid-area: 4 / 4 / 5 / 5;
+        color: #17254D;
+        font-family: Fieldwork;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 110%; /* 55px */
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        margin: 0;
+        white-space: nowrap;
+    }
+    
+    /*Home Page Gallery Redirect*/
+    
+    .homePgGallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 673px;
+        width: 100%;
+    }
+    
+    .homePgGallery img {
+        height: 673px;
+        width: 100%;
+        position: absolute;
+    }
+    
+    
+    .homePgGallery h1 {
+        color: #005F60;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 61.92px */
+        letter-spacing: -0.72px;
+    }
+    
+    .homePgGalleryTitle {
+        width: 100%;
+        height: 100%;
+        background: #005e602a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homePgGallery a {
+        z-index: 1;
+    }
+    
+    /*Footer*/
+    
+    footer {
+        height: 374px;
+        background: #016162;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    
+    footer h1 {
+        color: #FFF;
+        font-family: Fieldwork;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 4%;
+    }
+    
+    .footerRedirects {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 1% 0 0 3%;
+    }
+    
+    .footerSocials {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 1.5%;
+    }
+    
+    .footerSocials img {
+        scale: 1.1;
+    }
+    
+    footer ul {
+        display: inline-flex;
+        list-style-type: none;
+        margin: 0%;
+        text-align: right;
+        padding: 0 0 0 3%;
+        justify-content: center;
+    }
+    
+    footer li {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        height: 41px;
+    }
+
+    footer li h2 {
+        color: #17254D;
+        font-family: Fieldwork;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .footerTrademark {
+        width: 100%;
+        color: #000000;
+        font-family: Fieldwork;
+        font-size: 26px;
+        font-style: normal;
+        white-space: nowrap; 
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0 2.5%;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    /*About Page*/
+    
+    .aboutBody {
+        width: 100%;
+        height: 2504px;
+        margin: 0%;
+        border: 0%;
+        background: #FAA968;
+    }
+    
+    .aboutContent {
+        width: 100%;
+        height: 1155px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    
+    .aboutContent img {
+        scale: 1.1;
+        grid-area: 2 / 6 / 3 / 6;
+        margin: 0 0 0 15%;
+    }
+    
+    .aboutTitle {
+        width: 100%;
+        height: 155px;
+        flex-shrink: auto;
+        background-color: #F0562C;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .aboutTitle h1 {
+        margin: 0 2rem 0 0;
+        color: #FFF;
+        text-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 108px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 92.88px */
+        letter-spacing: -1.08px;
+    }
+    
+    .aboutFlex {
+        position: relative;
+        width: 130%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        grid-area: 2 / 1 / 3 / 4;
+        left: 25%;
+    }
+    
+    .aboutFlex h1 {
+        color: #F75526;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 108px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 75.68px */
+        letter-spacing: -0.88px;
+        margin: 0;
+        white-space: nowrap;
+    }
+    
+    .aboutFlex p {
+        color: #000;
+        font-family: Fieldwork;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 30.96px */
+        letter-spacing: 0.36px;
+    
+    }
+    
+    /*Member Images*/
+    
+    .memberSection {
+        display: flex;
+    }
+    
+    .memberSection h1 {
+        color: #F0562C;
+        font-family: Cubano;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 55.04px */
+        letter-spacing: -0.64px;
+        margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    .memberSection h2 {
+        color: #000;
+        font-family: Fieldwork;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%; 
+        letter-spacing: -0.36px;
+        margin: 0 0 0 1.5rem;
+    }
+    
+    .memberSection ul {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+    
+    .memberSection ul li {
+        display: inline-flex;
+        align-items: center;
+        list-style-type: none;
+    }
+    
+    .memberNameOne {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .memberImages {
+        display: flex;
+        justify-content: center;
+        background-color: #F0562C; 
+        padding-bottom: 10px;
+        overflow: hidden;
+    }
+    
+    .memberImages img {
+        width: 634px;
+        height: 572px;
+        transition: transform 0.3s ease;
+    }
+    
+    .memberImages img:hover {
+        transform: scale(1.1);
+    }
+    
+    /*Maps Container*/
+    .mapsBody {
+        width: 100%;
+        height: fit-content;
+        margin: 0%;
+        border: 0%;
+        background: #FAA968;
+    }
+    
+    .mapsMainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 991px;
+        flex-shrink: 0;
+        background: #FFF;
+    }
+    
+    .mapsMainContainer h1 {
+        color: #F0562C;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 76px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 65.36px */
+        letter-spacing: -0.76px;
+        margin: 30px 0;
+    }
+    
+    .mapsMainContainer h2 {
+        color: #F0562C;
+        font-family: Fieldwork;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%;
+        letter-spacing: -0.44px;
+        margin: 1rem 0 0 0;
+    }
+    
+    .mapsNavBar {
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 1521px;
+        height: 76px;
+        flex-shrink: 0;
+        background-color: #f7f7f7;
+        border: 2px solid #B0B0B0;
+    }
+    
+    .mapsNavBar label {
+        color: #000;
+        text-align: center;
+        font-family: Fieldwork;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 86%; /* 20.64px */
+        letter-spacing: -0.24px;
+        margin: 0;
+        cursor: pointer;
+        z-index: 999;
+    }
+    
+    .mapsSelect {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .mapsMainContainer input[type="button"] {
+        display: none;
+    }
+    
+    .mapsSelect:hover {
+        background-color: #dbdbdb;
+    }
+    
+    .mapDisplay {
+        padding: 2.5% 0;
+    }
+
+    .mapDisplay img {
+        width: 110%;
+        height: auto;
+    }
+    
+    #map-2,
+    #map-3, #map-4 {
+        display: none;
+    }
+    
+    
+    /*GALLERY*/
+    
+    .galleryBody {
+        height: fit-content;
+        background-color: rgb(36, 36, 36);
+    }
+    
+    .gallery {
+        padding: 0 0 7.5% 0;
+    
+    }
+    
+    .gallery h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #F75526;
+        font-family: "ARB-218 Big Blunt MAR-50";
+        font-size: 88px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 75.68px */
+        letter-spacing: -0.88px;
+    }
+    
+    .galleryImages {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+    
+    .galleryImages li {
+        flex: auto;
+        height: 750px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .galleryImages::after {
+        content: "";
+        flex-grow: 1;
+    }
+    
+    .galleryImages li img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+    }
+    
+    .galleryOverlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #55bfe9c7;
+        top: 0;
+        left: 0;
+        transform: scale(1, 0);
+        transition: all 0.3s 0.1s;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .galleryImages li:hover {
+        flex-basis: auto;
+    }
+    
+    .galleryImages li:hover .galleryOverlay {
+        transform: scale(1);
+    }
+}

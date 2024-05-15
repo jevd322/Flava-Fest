@@ -103,3 +103,34 @@ sideBarThree.addEventListener('click', function() {
     activeOne.style.color = '#D7DF26';
     activeThree.style.color = '#fbffa7';
 })
+
+const mapGeneral = document.getElementById('mapGeneralbtn');
+const mapPescatarian = document.getElementById('mapPescatarianbtn');
+const mapVegan = docum.getElementById('mapVeganbtn');
+const mapVegetarian = docum.getElementById('mapVegetarianbtn');
+
+const generalAppear = document.getElementById('map-1');
+const pescatarianAppear = document.getElementById('map-2');
+const veganAppear = document.getElementById('map-3');
+const vegetarianAppear = document.getElementById('map-4');
+
+mapPescatarian.addEventListener('click', function() {
+    generalAppear.style.display = 'none';
+    pescatarianAppear.style.display = 'block';
+    veganAppear.style.display = 'none';
+    vegetarianAppear.style.display = 'none';
+})
+
+mapVegan.addEventListener('click', function() {
+    generalAppear.style.display = 'none';
+    pescatarianAppear.style.display = 'none';
+    veganAppear.style.display = 'block';
+    vegetarianAppear.style.display = 'none';
+})
+
+mapVegetarian.addEventListener('click', function() {
+    generalAppear.style.display = 'none';
+    pescatarianAppear.style.display = 'none';
+    veganAppear.style.display = 'none';
+    vegetarianAppear.style.display = 'block';
+})

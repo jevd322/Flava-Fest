@@ -13,7 +13,7 @@
         <div class="headerText">
             <h1><a href="about.html">ABOUT</a></h1>
             <h1><a href="maps.html">MAPS</a></h1>
-            <h1>CONTACT</h1>
+            <h1><a href="index.html#instructionSection">INSTRUCTIONS</a></h1>
             <h1><a href="gallery.html">GALLERY</a></h1>
         </div>
         <ul>
@@ -37,10 +37,34 @@
             </div>
         </div>
         <div class="mapsNavBar">
-            <h4>General</h4>
-            <h4>Pescatarian</h4>
-            <h4>Vegan</h4>
-            <h4>Vegetarian</h4>
+            <input type="button" id="mapGeneralbtn">
+            <input type="button" id="mapPescatarianbtn">
+            <input type="button" id="mapVeganbtn">
+            <input type="button" id="mapVegetarianbtn">
+            <div class="mapsSelect">
+                <label for="mapGeneral-btn">General</label>
+            </div>
+            <div class="mapsSelect">
+                <label for="mapPescatarian-btn">
+                    Pescatarian
+                </label>
+            </div>
+            <div class="mapsSelect">
+                <label for="mapVegan-btn">
+                    <h4>Vegan</h4>
+                </label>   
+            </div>
+            <div class="mapsSelect">
+                <label for="mapVegetarian-btn">
+                    <h4>Vegetarian</h4>
+                </label>
+            </div>
+        </div>
+        <div class="mapDisplay">
+            <img src="maps/General.png" alt="General Map" title="General Map" id="map-1">
+            <img src="maps/Pescatarian 1.png" alt="General Map" title="General Map" id="map-2">
+            <img src="maps/Vegan.png" alt="General Map" title="General Map" id="map-3">
+            <img src="maps/Vegetarian.png" alt="General Map" title="General Map" id="map-4">
         </div>
     </section>
 
@@ -55,13 +79,19 @@
         <div class="footerSocials">
             <ul>
                 <li>
-                    <img src="assets/FB-Logo.png" alt="Facebook Logo">
+                <a href="https://www.instagram.com/flavafestireland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
                     <img src="assets/IG-Logo.png" alt="Instagram Logo">
-                    <img src="assets/Linkedin-Logo.png" alt="LinkedIn Logo">
-                    <img src="assets/Twitter-Logo.png" alt="Twitter Logo">
+                </a>
+                <a href="https://www.instagram.com/flavafestireland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <h2>@flavafestireland</h2>
+                </a>
                 </li>
             </ul>
         </div>
+        <p class="footerTrademark">This website was created by Jevryl Dalumpines</p>
     </footer>
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
